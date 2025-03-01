@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🎱 행운의 로또</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="/javascript-lotto/assets/ticket-Bce-u4b3.png" />
+    <script type="module" crossorigin src="/javascript-lotto/assets/index-Dkk9NpBU.js"></script>
+    <link rel="stylesheet" crossorigin href="/javascript-lotto/assets/index-D_NhAA3B.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <header>
+        <h1 class="title">🎱 행운의 로또</h1>
+      </header>
+
+      <!-- 로또 게임 -->
+      <main id="lottoGame" class="opacity-0">
+        <section class="inner">
+          <h2 class="title">🎱 내 번호 당첨 확인 🎱</h2>
+
+          <!-- 금액 입력 -->
+          <section class="purchase_amount_section">
+            <h2>구입할 금액을 입력해주세요.</h2>
+            <div class="purchase_amount">
+              <input type="text" id="purchaseAmount" placeholder="금액" />
+              <button id="purchaseButton" class="caption">구입</button>
+            </div>
+          </section>
+
+          <!-- 구매한 로또 목록 -->
+          <section class="lotto_pack_section">
+            <h2 class="purchase_count"></h2>
+            <div class="lotto_pack"></div>
+          </section>
+
+          <!-- 당첨 번호 및 보너스 번호 입력 -->
+          <section class="answer_lotto_section">
+            <h2 class="answer_lotto_title">지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</h2>
+            <form class="answer_lotto">
+              <div class="answer_lotto_number">
+                <span>당첨 번호</span>
+                <div class="winning_input">
+                  <input type="text" class="number winning_number" maxlength="2" />
+                  <input type="text" class="number winning_number" maxlength="2" />
+                  <input type="text" class="number winning_number" maxlength="2" />
+                  <input type="text" class="number winning_number" maxlength="2" />
+                  <input type="text" class="number winning_number" maxlength="2" />
+                  <input type="text" class="number winning_number" maxlength="2" />
+                </div>
+              </div>
+              <div class="answer_lotto_number">
+                <span>보너스 번호</span>
+                <div class="bonus_input">
+                  <input type="text" class="number bonus_number" maxlength="2" />
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <!-- 결과 확인 버튼 -->
+          <section class="reuslt_button_section">
+            <button id="resultButton" class="caption">결과 확인하기</button>
+          </section>
+        </section>
+      </main>
+
+      <!-- 당첨 결과 모달 -->
+      <dialog class="lotto_result_modal">
+        <section id="lottoResult">
+          <form method="dialog">
+            <button><img class="close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFRSURBVHgB7ZpdCsIwEISDJ/Ao3v+l3sCjeATNCgOBxtb8zw4O7FtKvg/aZps0hH2usbZYt+AnxmrM17OBNuAR6xXrGXxIGqOxGrOxf5VM5VDskqkcKiuZk2OXzMllJY/kWCWP5HaS28lANslf5FD30gtWS1azepBsZmSW7MbGKNmdiUlyGAuD5HCGlZLT5l4hOX3OmRMuu2tmTLz8uR8JQPPmHgFCt/b2BKLtnnqA0fe/LYAemvtPakDdyCGlwK7kkBJJd3JIL0lKOaRVkloOqZV0IYeUSg6Tu4R/iiN9i0q/ZKSXCemFXrpVk262pT+XpD94pbcspDedpLcNpTd+pbfupQ9fpI/PGN5s0qe7w1gYu4tuTMz9YTMbs1wzowc5pIp1K71gcUokzU3/d8oQxH+IRXKSrHJITjIrh6SS7HJIKnkoh9iALfiQQ4zVmHdyb2yfHjBkH90BAAAAAElFTkSuQmCC" alt="x" width="16px" height="16px" /></button>
+          </form>
+          <div class="inner">
+            <h2 class="title">🏆 당첨 통계 🏆</h2>
+            <div class="statistics">
+              <div class="header-row">
+                <span class="match_count">일치 갯수</span>
+                <span class="price">당첨금</span>
+                <span class="winning_count">당첨 갯수</span>
+              </div>
+              <div class="row">
+                <span class="match_count">3개</span>
+                <span class="price">5,000</span>
+                <span class="winning_count user_count">n개</span>
+              </div>
+              <div class="row">
+                <span class="match_count">4개</span>
+                <span class="price">50,000</span>
+                <span class="winning_count user_count">n개</span>
+              </div>
+              <div class="row">
+                <span class="match_count">5개</span>
+                <span class="price">1,500,000</span>
+                <span class="winning_count user_count">n개</span>
+              </div>
+              <div class="row">
+                <span class="match_count">5개+보너스볼</span>
+                <span class="price">30,000,000</span>
+                <span class="winning_count user_count">n개</span>
+              </div>
+              <div class="row">
+                <span class="match_count">6개</span>
+                <span class="price">2,000,000,000</span>
+                <span class="winning_count user_count">n개</span>
+              </div>
+            </div>
+            <span class="profit_rate"></span>
+            <button id="restartButton" class="caption">다시 시작하기</button>
+          </div>
+        </section>
+      </dialog>
+
+      <!-- 에러 모달 -->
+      <dialog class="error_modal"></dialog>
+
+      <footer>
+        <p class="caption">Copyright 2025. woowacourse</p>
+      </footer>
+    </div>
+  </body>
+</html>
